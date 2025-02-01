@@ -172,7 +172,7 @@ class OrderListController extends Controller
 
         return view('kitchen.order.order_pending_list', compact('groups', 'chefs', 'dboys'));
     }
-
+    
     // public function orderPendingListAjax(Request $request)
     // {
     //     if (isset($_GET['search']['value'])) {

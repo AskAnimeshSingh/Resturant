@@ -1,4 +1,4 @@
-@extends('kitchen.layout.layouts')
+{{-- @extends('kitchen.layout.layouts') --}}
 @section('extra_css')
     <style>
         .timer-container {
@@ -33,15 +33,15 @@
     </style>
 @endsection
 
-@section('content')
+@section('content1')
     <section class="section">
         <div class="section body">
             {{-- <div class="row"> --}}
-            <div class="card">
+            {{-- <div class="card">
                 <div class="card-header">
                     <h5>New And Cooking Orders List</h5>
                 </div>
-            </div>
+            </div> --}}
             <div class="col-12">
                 <div class="row">
                     @if (count($groups) > 0)
@@ -52,22 +52,10 @@
                             <div class="col-lg-4 col-sm-12 col-md-6">
                                 <div class="card">
                                     @if ($order->status == 'PENDING')
-                                    {{-- timer style1 --}}
                                         <button class="btn btn-primary btn-sm"
                                             style="float: right; width:120px; font-weight:700;">
                                             New Order <span id="timer-{{ $order->id }}"></span>
                                         </button>
-                                                                            {{-- timer style2 --}}
-
-                                        {{-- <div class="d-flex justify-content-between align-items-center">
-                                            <button class="btn btn-primary btn-sm"
-                                                style="float: right; width: 120px; font-weight: 700;">
-                                                New Order
-                                            </button>
-                                            <div id="timer-{{ $order->id }}" 
-                                                style="font-weight: 700; color: red; margin-left: 80px; padding: 5px 10px; font-size: 16px;">
-                                            </div>
-                                        </div> --}}
                                         <script>
                                             document.addEventListener("DOMContentLoaded", function () {
                                                 let orderCreatedAt = new Date("{{ $order->created_at }}").getTime();

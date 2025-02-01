@@ -154,10 +154,17 @@
                 </div>
                </a>
             </div>
+            
         </div>
-
-
+      
+        <div class="col-md-12 mt-4">
+            <h4>Pending Orders</h4><br>
+            @include('kitchen.PendingOrder.cardpendingorder', ['groups' => $groups, 'chefs' => $chefs, 'dboys' => $dboys])
+        </div>
     </section>
+    <!-- Include Pending Orders Section -->
+   
+    @endsection
     {{-- <div class="settingSidebar">
         <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
         </a>
@@ -255,4 +262,6 @@
 @section('extra_js')
     <script></script>
 @endsection
-@endsection
+
+
+

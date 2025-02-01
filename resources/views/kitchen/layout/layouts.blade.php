@@ -43,6 +43,7 @@
             <!-- content--->
             <div class="main-content">
                 @yield('content')
+                @yield('content1') 
             </div>
 
              <!-- include footer-->
